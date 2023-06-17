@@ -1,0 +1,66 @@
+@import "color";
+
+.cursor {
+  width: 26px;
+  height: 26px;
+  border: 2px solid $red;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.cursorHover {
+  transform: scale(3);
+  border: none;
+  box-shadow: 0 0 10px $red;
+}
+.cursorMini {
+  transform: scale(0.5);
+  box-shadow: 0 0 20px $red;
+}
+
+.logo {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  width: 12rem;
+  img {
+    width: 100%;
+  }
+}
+.franchiseBtn {
+  text-transform: uppercase;
+  background-color: $brown;
+  text-decoration: none;
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  font: 700 14px $text;
+  color: $yellow;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  &:hover {
+    transform: skewX(-10deg);
+  }
+}
+.scrollBar {
+  position: absolute;
+  left: 50%;
+  bottom: 5rem;
+  transform: translateY(-20%);
+  color: $white;
+  font-weight: 500;
+  font-size: 4rem;
+  animation: mouseScrollAnimation 0.5s linear infinite alternate;
+}
+@keyframes mouseScrollAnimation {
+  to {
+    transform: translateY(-10px);
+  }
+}
